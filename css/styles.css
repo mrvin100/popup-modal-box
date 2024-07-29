@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* custom css file made by JeanDoe */
+
+/* import Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* css variables */
+
+:root{
+	--main-clr: #567;
+/*	--light-bg: #e1d1f1;*/
+	--light-bg: #f9fafa;
+	--light-clr: #7a7b7c;
+	--black: #1a1b1c;
+	--white: #fff;
+	--red: #f44574;
+	
+	--body-font: 'Poppins','Ubuntu Mono', sans-serif;
+}
+
+/* initialisation */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	font-weight: normal;
+}
+
+html{
+	font-size: 120%;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
+	background: var(--light-bg);
+	font-family: var(--body-font);
+}
+
+/* modal section starts */
+
+.modal{
+	
+}
+button{
+	cursor: pointer;
+}
+.modal .submit{
+	padding: 1rem;
+	border-radius: .25rem;
+	color: var(--black);
+	font-size: 1.2rem;
+}
+.modal .submit.hide{
+	display: none;
+}
+.modal .submit span{
+	margin-right: .25rem;
+	color: var(--black);
+}
+
+.modal .poppup{
+	display: none;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	border-radius: .25rem;
+	background: #e1d1f1;
+	position: relative;
+	margin: 1.5rem;
+	transition: .4s all ease;
+}
+
+.modal .poppup.show{
+	display: flex;
+}
+
+.modal .poppup .cancel{
+	position: absolute;
+	top: -.7rem;
+	right: -.7rem;
+	background: #75c;
+	color: var(--white);
+	font-size: .938rem;
+	border-radius: 50%;
+	height: 1.5rem;
+	width: 1.5rem;
+	text-align: center;
+}
+.modal .poppup .cancel:hover{
+	background: var(--red);
+}
+.modal .poppup .cancel i{
+	margin: auto;
+}
+
+.modal .poppup img{
+	height: 8rem;
+	width: 8rem;
+	border-radius: .25rem;
+}
+
+.modal .poppup p{
+	font-size: .938rem;
+	color: var(--black);
+	font-weight: 300;
+	margin-bottom: 2rem;
+}
+
+.modal .poppup .add{
+	background: none;
+	font-size: 1rem;
+	font-family: var(--body-font);
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	color: var(--main-clr);
+}
+.modal .poppup .add:hover{
+	color: var(--light-clr);
+}
+
+
+/* responsive design with media queries */
+
+@media screen and (max-width: 450px){
+	.modal .poppup{
+		flex-direction: column;
+	}
+}
+
+
+
+
+
+
+
+
